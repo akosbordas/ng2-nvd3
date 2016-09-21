@@ -1,15 +1,14 @@
-import { Component, OnInit, OnChanges, ElementRef, Inject } from '@angular/core';
+import {Input, Component, OnInit, OnChanges, ElementRef, Inject } from '@angular/core';
 declare var d3, nv: any;
 
 @Component({
   selector: 'nvd3',
-  inputs: ['options', 'data'],
   template: ``
 })
 
-export class nvD3 {
-  options: any;
-  data: any;
+export class nvD3Component {
+  @Input() options: any;
+  @Input() data: any;
   el: any;
   chart: any;
   svg: any;

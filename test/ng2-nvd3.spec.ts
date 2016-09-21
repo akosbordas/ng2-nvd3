@@ -1,6 +1,6 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component, OnInit} from '@angular/core';
-import {nvD3} from '../lib/ng2-nvd3';
+import { nvD3Component} from '../lib/ng2-nvd3';
 
 declare let describe, beforeEach, it, expect, d3: any;
 let currentChartType: string;
@@ -31,7 +31,7 @@ const chartTypes = [
 //
 @Component({
   selector: 'main',
-  directives: [nvD3],
+  directives: [nvD3Component],
   template: `
     <div>
       <h1 class="type">{{options.chart.type}}</h1>
